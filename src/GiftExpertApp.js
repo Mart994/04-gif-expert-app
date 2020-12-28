@@ -1,20 +1,19 @@
 import React, { useState } from 'react'
 import { AddCategory } from './componentes/AddCategory'
-import { Gif } from './componentes/Gif'
+import { GifGrid } from './componentes/Gif';
 
 export const GiftExpertApp = () => {
 
-    // const categorias = ['One Punch Man', 'Grand Pretender', 'Dr Stone'];
-    const [categories, setCategorias] = useState(['One Punch Man'])
+    const [categories, setCategories] = useState(['One Punch Man'])
 
     return (
         <>
             <h2>GiftExpertApp</h2>
-            <AddCategory setCategorias={ setCategorias }/>
+            <AddCategory setCategories={ setCategories }/>
             <hr/>
             <ol>
-                {categories.map( category=>
-                    <Gif 
+                {categories.map( category =>
+                    <GifGrid
                         key={ category }
                         category={ category }/>
                     
